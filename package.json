@@ -8,8 +8,9 @@
     "dev": "vite",
     "dev:host": "vite --host",
     "build": "vite build",
-    "lint": "eslint 'src/*.js'",
-    "lint:fix": "eslint 'src/*.js' --fix",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "eslint 'src/**/*.ts' --fix",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
@@ -22,10 +23,6 @@
     "url": "https://github.com/burntcustard/tiny-yurts/issues"
   },
   "homepage": "https://github.com/burntcustard/tiny-yurts#readme",
-  "dependencies": {
-    "kontra": "^9.0.0",
-    "rollup-plugin-kontra": "^1.0.1"
-  },
   "devDependencies": {
     "advzip-bin": "^2.0.0",
     "eslint": "^8.47.0",
@@ -34,7 +31,9 @@
     "html-minifier": "^4.0.0",
     "jszip": "^3.10.1",
     "roadroller": "^2.1.0",
-    "terser": "^5.19.2",
-    "vite": "^4.4.9"
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "excalibur": "^0.32.0"
   }
 }
